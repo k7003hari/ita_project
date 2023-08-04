@@ -1,0 +1,372 @@
+/*
+    StyleSheet For Responsive Bootstrap Carousel Effect Ken Burns
+    Author: Razboynik
+    Author URI: http://filwebs.ru
+    Description: Bootstrap Carousel Effect Ken Burns
+*/
+.kb_control_left,.kb_control_right
+{
+    top:50%;
+    z-index:2;
+    opacity:0;
+    width:55px;
+    height:55px;
+    text-align:center;
+    -webkit-transition:all ease-in-out .3s;
+    transition:all ease-in-out .3s;
+	background: #fff !important;
+	color:#000;
+}
+.kb_wrapper:hover .kb_control_left,.kb_wrapper:hover .kb_control_right
+{
+    opacity:.8;
+	    color: #000;
+}
+.kb_icons
+{
+    line-height:50px;
+    font-size:34px!important;
+    font-weight:normal!important;
+}
+.kb_control_left
+{
+    left:1% !important;
+}
+.kb_control_right
+{
+    right:1% !important;
+}
+.kb_control_left span,.kb_control_right span {
+    top: .7em;
+}
+.kb_elastic
+{
+    opacity:1;
+    -webkit-transform:scale3d(1,1,1);
+    transform:scale3d(1,1,1);
+}
+.kb_elastic .item
+{
+    top:0;
+    z-index:1;
+    opacity:0;
+    width:100%;
+    position:absolute;
+    left:0!important;
+    display:block!important;
+    -webkit-transform:scale3d(2,1,2);
+    transform:scale3d(2,1,2);
+    -webkit-transition:-webkit-transform .7s ease-in-out 0s,opacity ease-in-out .7s;
+    transition:transform .7s ease-in-out 0s,opacity ease-in-out .7s;
+}
+.kb_elastic .item:first-child
+{
+    top:auto;
+    position:relative;
+}
+.kb_elastic .item.active
+{
+    opacity:1;
+    z-index:2;
+    -webkit-transform:scale3d(1,1,1);
+    transform:scale3d(1,1,1);
+    -webkit-transition:-webkit-transform .7s ease-in-out 0s,opacity ease-in-out .7s;
+    transition:transform .7s ease-in-out 0s,opacity ease-in-out .7s;
+}
+.kb_wrapper
+{
+    overflow:hidden;
+    max-height:650px;
+}
+.kb_wrapper>.carousel-inner>.item>img,.kb_wrapper>.carousel-inner>.item>a>img
+{
+    margin:auto;
+    opacity:.8;
+    width:100%!important;
+    -webkit-transform-origin:100% 0;
+    -moz-transform-origin:100% 0;
+    -ms-transform-origin:100% 0;
+    -o-transform-origin:100% 0;
+    transform-origin:100% 0;
+    -webkit-animation:immortalkenburns 20000ms linear 0s infinite alternate;
+    animation:immortalkenburns 20000ms linear 0s infinite alternate;
+}
+    @-webkit-keyframes immortalkenburns
+{
+    0%
+{
+    -webkit-transform:scale(1);
+    -webkit-transition:-webkit-transform 20000ms linear 0s;
+}
+    100%
+{
+    -webkit-transform:scale(1.2);
+    -webkit-transition:-webkit-transform 20000ms linear 0s;
+}
+
+}
+    @-moz-keyframes immortalkenburns
+{
+    0%
+{
+    -moz-transform:scale(1);
+    -moz-transition:-moz-transform 20000ms linear 0s;
+}
+    100%
+{
+    -moz-transform:scale(1.2);
+    -moz-transition:-moz-transform 20000ms linear 0s;
+}
+
+}
+    @-ms-keyframes immortalkenburns
+{
+    0%
+{
+    -ms-transform:scale(1);
+    -ms-transition:-ms-transform 20000ms linear 0s;
+}
+    100%
+{
+    -ms-transform:scale(1.2);
+    -ms-transition:-ms-transform 20000ms linear 0s;
+}
+
+}
+    @-o-keyframes immortalkenburns
+{
+    0%
+{
+    -o-transform:scale(1);
+    -o-transition:-o-transform 20000ms linear 0s;
+}
+    100%
+{
+    -o-transform:scale(1.2);
+    -o-transition:-o-transform 20000ms linear 0s;
+}
+
+}
+    @keyframes immortalkenburns
+{
+    0%
+{
+    transform:scale(1);
+    transition:transform 20000ms linear 0s;
+}
+    100%
+{
+    transform:scale(1.2);
+    transition:transform 20000ms linear 0s;
+}
+
+}
+.kb_caption {
+    left: 20%;
+    width: 30%;
+    bottom: 45%;
+    text-align: left;
+}
+.kb_caption_right
+{
+    left:50%;
+}
+.kb_caption_center
+{
+    float:none;
+    margin:auto;
+}
+.kb_caption h3
+{
+    font-size: 3em;
+    text-align: center;
+    text-shadow: none;
+    padding: .1em;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+	background: #fff;
+	    color: #F58703;
+}
+.kb_caption h4
+{
+    font-size: 2em;
+    text-align: center;
+    text-shadow: none;
+    padding-left: 0;
+    font-weight: normal;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    margin: .5em 0 0;
+	text-transform:capitalize;
+}
+@media only screen and (max-width:1366px){
+	.kb_caption h3 {
+		font-size: 2.5em;
+	}
+	.kb_caption h4 {
+		font-size: 1.8em;
+	}
+	.kb_caption {
+		bottom: 35%;
+}
+@media only screen and (max-width:1280px){
+}
+.kb_caption {
+    bottom: 32%;
+}
+}
+@media only screen and (max-width:1080px){
+.kb_caption
+{
+    bottom:33%;
+	    width: 31%;
+}
+.kb_control_left, .kb_control_right {
+    top: 46%;
+}
+}
+@media only screen and (max-width:991px){
+	.kb_caption h3 {
+		font-size: 2.2em;
+	}
+	.kb_caption h4 {
+		font-size: 1.5em;
+	}
+}
+@media only screen and (max-width:800px){
+	.kb_control_left, .kb_control_right {
+		width: 40px;
+		height: 40px;
+	}
+	.kb_control_left span, .kb_control_right span {
+		top: .4em;
+	}
+}
+@media only screen and (max-width:768px){	
+	.kb_caption {
+		width: 40%;
+	}
+	..kb_caption h3 {
+		font-size: 2em;
+	}
+}
+@media only screen and (max-width:767px){	
+	.kb_caption h3 {
+		font-size: 1.8em;
+	}
+}
+@media only screen and (max-width:600px){	
+	.kb_caption h4 {
+		font-size: 1.2em;
+	}
+	.kb_caption h3 {
+		font-size: 1.6em;
+		padding: .1em .1em .3em;
+	}
+}
+@media only screen and (max-width:384px){	
+	.kb_caption h3 {
+		font-size: 1.3em;
+	}
+	.kb_caption h4 {
+		font-size: 1em;
+	}
+	.kb_control_left, .kb_control_right {
+		width: 25px;
+	}
+}
+    @media only screen and (max-width:480px)
+{
+.kb_control_left,.kb_control_right
+{
+    border:0;
+}
+.kb_icons
+{
+    font-size:18px !important;
+}
+.kb_caption
+{
+    left:0;
+    width:100%;
+    bottom:28%;
+    text-align:center;
+}
+.kb_caption h3
+{
+    font-size:25px;
+	padding: .3em .1em .3em;
+}
+.kb_caption h4
+{
+    font-size:20px;
+}
+
+}
+    @media(min-width:481px) and (max-width:600px)
+{
+.kb_control_left,.kb_control_right
+{
+    border:0;
+}
+
+}
+    @media(min-width:601px) and (max-width:767px)
+{
+	.kb_caption h3 {
+		padding: .1em .1em .2em;
+	}
+.kb_caption
+{
+    left: 10%;
+    width: 40%;
+    bottom: 29%;
+    text-align:center;
+}
+
+}
+    @media(min-width:991px) and (max-width:991px) 
+{
+.kb_caption
+{
+    bottom:33%;
+	width:35%;
+}
+
+}
+.kb_wrapper
+{
+    background:#000;
+}
+.kb_control_left,.kb_control_left:hover,.kb_control_left:active,.kb_control_left:focus,.kb_control_right,.kb_control_right:hover,.kb_control_right:active,.kb_control_right:focus
+{
+    color:#000;
+    border:2px solid #fff;
+    background:#fff !important;
+}
+.kb_caption h3
+{
+    color: #F58703;
+    background: #fff;
+}
+.kb_caption h4
+{
+    color:#fff
+}
+    @media(max-width:600px)
+{
+.kb_control_left,.kb_control_left:hover,.kb_control_left:active,.kb_control_left:focus,.kb_control_right,.kb_control_right:hover,.kb_control_right:active,.kb_control_right:focus
+{
+    border:none !important;
+    background:#fff !important;
+}
+
+}
+@media only screen and (max-width:320px){	
+	.kb_caption h3 {
+		font-size: 1.2em;
+	}
+	.kb_caption h4 {
+		font-size: 1em;
+	}
+}
